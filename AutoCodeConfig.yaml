@@ -9,14 +9,14 @@ generators:
   severity: null
   database: null
   inactive: false
-  matches: null
+  matches: []
 - type: "sla"
   assertions:
   - "@StatusCode == 200 AND @ResponseTime < 500"
   tags: null
   severity: null
   database: null
-  inactive: false
+  inactive: true
   matches:
   - name: null
     value: null
@@ -33,7 +33,7 @@ generators:
   tags: null
   severity: null
   database: null
-  inactive: false
+  inactive: true
   matches:
   - name: null
     value: null
@@ -50,7 +50,7 @@ generators:
   tags: null
   severity: null
   database: null
-  inactive: false
+  inactive: true
   matches:
   - name: null
     value: null
@@ -67,7 +67,7 @@ generators:
   tags: null
   severity: null
   database: null
-  inactive: false
+  inactive: true
   matches:
   - name: null
     value: null
@@ -84,7 +84,7 @@ generators:
   tags: null
   severity: null
   database: null
-  inactive: false
+  inactive: true
   matches:
   - name: null
     value: null
@@ -102,7 +102,7 @@ generators:
   tags: null
   severity: null
   database: null
-  inactive: false
+  inactive: true
   matches:
   - name: "ROLE_ADMIN,ROLE_PM,ROLE_USER"
     value: null
@@ -120,7 +120,7 @@ generators:
   tags: null
   severity: null
   database: null
-  inactive: false
+  inactive: true
   matches:
   - name: "pageSize, page_size, maxResults, max_results"
     value: null
@@ -140,8 +140,8 @@ generators:
   tags: null
   severity: null
   database: null
-  inactive: false
-  matches: null
+  inactive: true
+  matches: []
 - type: "sql_injection_timebound"
   assertions:
   - "@ResponseTime < 7000 OR @ResponseTime > 10000"
@@ -151,7 +151,7 @@ generators:
   database:
     name: "MySQL"
     version: "5.7"
-  inactive: false
+  inactive: true
   matches: []
 - type: "log_Forging"
   assertions:
@@ -162,8 +162,8 @@ generators:
   tags: null
   severity: null
   database: null
-  inactive: false
-  matches: null
+  inactive: true
+  matches: []
 - type: "invalid_datatype"
   assertions:
   - "@StatusCode != 401"
@@ -171,8 +171,8 @@ generators:
   tags: null
   severity: null
   database: null
-  inactive: false
-  matches: null
+  inactive: true
+  matches: []
 - type: "special_chars "
   assertions:
   - "@StatusCode != 200"
@@ -182,8 +182,8 @@ generators:
   tags: null
   severity: null
   database: null
-  inactive: false
-  matches: null
+  inactive: true
+  matches: []
 - type: "null_value"
   assertions:
   - "@StatusCode != 200"
@@ -193,8 +193,8 @@ generators:
   tags: null
   severity: null
   database: null
-  inactive: false
-  matches: null
+  inactive: true
+  matches: []
 - type: "empty_value"
   assertions:
   - "@StatusCode != 200"
@@ -204,8 +204,8 @@ generators:
   tags: null
   severity: null
   database: null
-  inactive: false
-  matches: null
+  inactive: true
+  matches: []
 - type: "negative_number"
   assertions:
   - "@StatusCode != 401"
@@ -213,8 +213,8 @@ generators:
   tags: null
   severity: null
   database: null
-  inactive: false
-  matches: null
+  inactive: true
+  matches: []
 - type: "create"
   assertions:
   - "@StatusCode != 200"
@@ -224,5 +224,5 @@ generators:
   tags: null
   severity: null
   database: null
-  inactive: false
-  matches: null
+  inactive: true
+  matches: []
